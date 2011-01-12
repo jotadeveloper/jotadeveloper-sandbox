@@ -4,6 +4,16 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="hello" class="org.jotadeveloper.spring.JuanSpring" />
+    <bean id="hello2" class="org.jotadeveloper.spring.JuanSpring2">
+         <property name="name" value="vaaaaaaaaaaa"></property>
+    </bean>
+
+    <bean id="hello" class="org.jotadeveloper.spring.JuanSpring">
+        <property name="name" value="siiiiiiiiiii"></property>
+    </bean>
+
+    <bean id="factoryJuan"
+         class="org.jotadeveloper.spring.FactoryJuan"
+          />
 
 </beans>

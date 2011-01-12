@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class AppTest extends Base {
 
-    @Autowired
-    private JuanSpring juanSpring;
 
     /**
      * @return the suite of tests being tested
@@ -18,21 +16,13 @@ public class AppTest extends Base {
     @org.junit.Test
     public void testApp() {
         Assert.assertTrue(true);
-        Assert.assertNotNull(getJuanSpring());
-    }
-
-    /**
-     * @return the juanSpring
-     */
-    public JuanSpring getJuanSpring() {
-        return juanSpring;
-    }
-
-    /**
-     * @param juanSpring the juanSpring to set
-     */
-    public void setJuanSpring(JuanSpring juanSpring) {
-        this.juanSpring = juanSpring;
+        //Assert.assertNotNull(getJuanSpring());
+        Assert.assertNotNull(FactoryJuan.myStaticMethod("hello"));
+        Assert.assertNotNull(FactoryJuan.myStaticMethod("hello"));
+        final AbstractJota d = FactoryJuan.myStaticMethod("hello");
+        System.out.println(d.getName());
+        final AbstractJota d2 = FactoryJuan.myStaticMethod("hello2");
+        System.out.println(d.getName());
     }
 
 
