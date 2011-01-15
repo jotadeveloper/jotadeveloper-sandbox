@@ -4,11 +4,14 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="hello2" class="org.jotadeveloper.spring.JuanSpring2">
+       <bean id="abs" class="org.jotadeveloper.spring.AbstractJota" abstract="true">
+       </bean>
+
+    <bean id="hello2" class="org.jotadeveloper.spring.JuanSpring2" parent="abs">
          <property name="name" value="vaaaaaaaaaaa"></property>
     </bean>
 
-    <bean id="hello" class="org.jotadeveloper.spring.JuanSpring">
+    <bean id="hello" class="org.jotadeveloper.spring.JuanSpring" parent="abs">
         <property name="name" value="siiiiiiiiiii"></property>
     </bean>
 
